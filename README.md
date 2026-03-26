@@ -1,4 +1,7 @@
 # CRM Sales Performance Analysis
+
+<img width="1422" height="861" alt="Screenshot 2026-03-26 at 10 12 19 pm" src="https://github.com/user-attachments/assets/b2dd37a1-6c26-4076-98ce-03429dd999be" />
+
 ## Maven Analytics — CRM Sales Opportunities
 
 ---
@@ -36,7 +39,9 @@ The analysis was structured around four key pillars:
    How opportunities move through the funnel and where value is lost.
 
 ---
-
+## Live Dashboard
+https://public.tableau.com/app/profile/camilo.barrera3824/viz/CRMsales/Dashboard1?publish=yes
+---
 ## Dataset
 
 | Attribute | Detail |
