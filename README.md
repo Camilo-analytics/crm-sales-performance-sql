@@ -5,10 +5,35 @@
 
 ## Business Problem
 
-A B2B hardware company needed to understand how its sales pipeline
-was performing across regions, products, and agents. Sales management
-required clarity on where revenue was coming from, which agents were
-truly delivering value, and where opportunities were being lost.
+A B2B hardware company needed to evaluate the effectiveness of its sales pipeline.
+
+While revenue performance appeared strong, management lacked visibility into whether
+this growth was being achieved efficiently or at the expense of pricing discipline,
+deal quality, and long-term profitability.
+
+---
+
+## Business Question
+
+**Are we generating revenue efficiently, or are we sacrificing margin and deal quality to drive sales performance?**
+
+---
+
+## Analytical Framework
+
+The analysis was structured around four key pillars:
+
+1. **Revenue Performance**  
+   How much revenue is being generated and where it is coming from.
+
+2. **Sales Efficiency**  
+   How effectively agents convert opportunities into revenue.
+
+3. **Revenue Quality (Pricing & Margin Proxy)**  
+   Whether revenue is being generated at sustainable price levels.
+
+4. **Pipeline Health**  
+   How opportunities move through the funnel and where value is lost.
 
 ---
 
@@ -35,7 +60,7 @@ truly delivering value, and where opportunities were being lost.
 |---|---|---|
 | `01_crm_data_audit.sql` | Audit | Data quality across 4 tables + referential integrity |
 | `02_crm_cleaning.sql` | Cleaning | Standardisation and JOIN integrity fixes |
-| `03_crm_eda_revenue.sql` | Block A | Revenue by region, product, agent + profit analysis |
+| `03_crm_eda_revenue.sql` | Block A | Revenue by region, product, agent + pricing analysis |
 | `04_crm_eda_pipeline.sql` | Block B | Pipeline distribution, cycle time, lost revenue |
 | `05_crm_eda_accounts.sql` | Block C | Account segmentation, sector performance, win rates |
 
@@ -52,57 +77,74 @@ truly delivering value, and where opportunities were being lost.
 
 ---
 
-## Key Findings
+## Key Insights
 
-### Revenue & Products
-- GTX Pro leads revenue ($3,510,578 / 729 deals) — agents who
-  prioritize it disproportionately increase their total revenue.
-- GTK 500 is the highest revenue-per-deal product ($26,768 list price)
-  but only 15 deals closed — significant untapped opportunity.
-- West region leads revenue ($3,568,647) with fewer deals than Central
-  (1,438 vs 1,629) — Central closes lower-value deals on average.
+### 1. Revenue ≠ Performance Quality
 
-### Agent Performance
-- Darcel Schlecht ranks #1 in gross revenue ($1,153,214) but has
-  **negative total profit** — consistently closing below official price.
-- Daniell Hammack leads in profit despite ranking mid-tier in revenue —
-  gross revenue is a misleading performance metric without margin analysis.
-- Lajuana Vencill has the lowest win rate (54.98%) — priority coaching target.
-- Hayden Neloms leads win rate (70.39%) but ranks mid-tier in revenue —
-  win rate and revenue are not correlated.
+- Darcel Schlecht ranks #1 in revenue ($1.15M) but shows **negative pricing variance**, consistently closing deals below official price.
+- Daniell Hammack generates lower revenue but leads in pricing performance.
 
-### Pipeline Health
-- 48.2% of all deals are Won — pipeline is healthy.
-- Lost deals close faster (41.48 days) than Won deals (51.78 days) —
-  longer negotiation correlates with winning.
-- Darcel Schlecht leads in lost revenue opportunity ($734,313) —
-  same agent with negative profit, suggesting a high-volume low-margin strategy.
-
-### Account Segmentation
-- Enterprise accounts (Segment 4) generate nearly double the revenue
-  per account vs small companies ($158,066 vs $87,825).
-- Win rates are consistent across all sectors (61–65%) — conversion
-  is driven by agent behavior, not sector-specific factors.
-- Retail leads sector revenue ($1,867,528) followed by Technology and Medical.
+👉 **Insight:** Revenue alone is a misleading metric — pricing discipline varies significantly across agents.
 
 ---
 
+### 2. Growth is Volume-Driven, Not Value-Driven
+
+- Central region closes the most deals but generates less revenue than West.
+- This indicates **lower average deal value**.
+
+👉 **Insight:** Some regions rely on volume rather than high-value deals.
+
+---
+
+### 3. Pricing Strategy is Inconsistent
+
+- Agents operating at similar price levels achieve very different revenue outcomes.
+- High-performing agents are not always aligned with optimal pricing.
+
+👉 **Insight:** Lack of standardized pricing strategy across the sales team.
+
+---
+
+### 4. Product Mix Opportunity
+
+- GTK 500 has the highest revenue per deal ($26,768) but only 15 deals closed.
+- GTX Pro dominates revenue due to volume, not necessarily value efficiency.
+
+👉 **Insight:** Revenue concentration may be masking underutilized high-value products.
+
+---
+
+### 5. Pipeline Efficiency Signals
+
+- Win rate is 48.2% — overall healthy.
+- Lost deals close faster than won deals → negotiation time matters.
+
+👉 **Insight:** Longer sales cycles correlate with successful deal closure.
+
+---
+
+## Business Conclusion
+
+Revenue growth is being driven by a subset of agents operating at lower price points,
+suggesting a trade-off between volume and pricing discipline.
+
+The current sales strategy prioritizes closing deals over maintaining pricing consistency,
+which may negatively impact long-term margin performance.
+
 ## Recommendations
 
-1. **Review Darcel Schlecht's pricing discipline** — leads in gross
-   revenue but has negative profit and highest lost revenue opportunity.
-   High volume with below-price closes is hurting margins.
+1. **Standardize pricing strategy across agents**  
+   Reduce variability in deal pricing to improve revenue quality.
 
-2. **Increase GTK 500 focus** — highest revenue per deal product with
-   only 15 closes. Targeted GTK 500 campaigns could significantly
-   lift total revenue.
+2. **Re-evaluate high-volume, low-margin agents**  
+   Focus on sustainable performance, not just revenue ranking.
 
-3. **Coach Lajuana Vencill** — lowest win rate in the team (54.98%).
-   Nearly 1 in 2 deals lost represents significant pipeline waste.
+3. **Promote high-value products (GTK 500)**  
+   Increase sales focus on underutilized premium offerings.
 
-4. **Prioritize enterprise accounts** — Segment 4 companies generate
-   double the revenue per account. Sales effort should weight toward
-   larger clients.
+4. **Prioritize enterprise accounts**  
+   Larger clients generate significantly higher revenue per deal.
 
 ---
 
@@ -111,11 +153,10 @@ truly delivering value, and where opportunities were being lost.
 - Dataset is fictitious — findings are illustrative, not statistically conclusive.
 - 'unknown' accounts (1,425) excluded from account-level analysis.
 - close_value represents one-time deal value — not recurring revenue.
-- Profit analysis uses list price as baseline — actual cost of goods not available.
+- Pricing analysis uses list price as baseline — cost data not available.
 
 ---
 
 ## Author
-Camilo B. Martinez — Junior Data Analyst
+Camilo B. Martinez — Junior Data Analyst  
 Adelaide, SA, Australia
-https://github.com/Camilo-analytics/crm-sales-performance-sql
