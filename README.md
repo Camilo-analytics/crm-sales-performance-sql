@@ -168,4 +168,5 @@ which may negatively impact long-term margin performance.
 ## Author
 Camilo B. Martinez — Junior Data Analyst  
 Adelaide, SA, Australia
+
 🔗 [Repo link](https://github.com/Camilo-analytics/crm-sales-performance-sql)
