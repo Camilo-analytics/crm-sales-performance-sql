@@ -1,6 +1,7 @@
 # CRM Sales Performance Analysis
 
-<img width="1422" height="861" alt="Screenshot 2026-03-26 at 10 12 19 pm" src="https://github.com/user-attachments/assets/b2dd37a1-6c26-4076-98ce-03429dd999be" />
+<img width="2552" height="1409" alt="Screenshot 2026-03-27 at 8 35 30 pm" src="https://github.com/user-attachments/assets/acccb2d2-6e23-4115-b878-994ba85bed8e" />
+
 
 ## Maven Analytics — CRM Sales Opportunities
 
@@ -41,7 +42,7 @@ The analysis was structured around four key pillars:
 ---
 ## Live Dashboard
 
-🔗 [View Interactive Dashboard on Tableau Public]( https://public.tableau.com/app/profile/camilo.barrera3824/viz/CRMsales/Dashboard1?publish=yes)
+🔗 [View Interactive Dashboard on Tableau Public]([ https://public.tableau.com/app/profile/camilo.barrera3824/viz/CRMsales/Dashboard1?publish=yes](https://public.tableau.com/app/profile/camilo.barrera3824/viz/CRMsales/Dashboard3?publish=yes))
 ---
 ---
 ## Dataset
