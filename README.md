@@ -42,7 +42,7 @@ The analysis was structured around four key pillars:
 ---
 ## Live Dashboard
 
-🔗 [View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/camilo.barrera3824/viz/CRMsales/Dashboard3?publish=yes)
+🔗 [View Interactive Dashboard on Tableau Public](https://public.tableau.com/app/profile/camilo.barrera3824/viz/CRMsales/SalesPerformanceOverviewPricingandrevenueshowatrade-offacrossagents_1?publish=yes)
 ---
 ---
 ## Dataset
